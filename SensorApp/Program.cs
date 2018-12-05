@@ -9,7 +9,9 @@ namespace SensorApp
         static void Main(string[] args)
         {
             Sensor sensor = new Sensor("Temperature");
-            sensor.NewValue += new Sensor.NewValueHandler(OnNewValue);
+            
+            //sensor.NewValue += new Sensor.NewValueHandler(OnNewValue);
+            sensor.NewValue += OnNewValue;
 
             Random random = new Random();
             for (int i = 0; i < 5; i++)
