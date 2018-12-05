@@ -23,9 +23,9 @@ namespace SensorApp
             Console.WriteLine("Finished!");
         }
 
-        static void OnNewValue(double value)
+        static void OnNewValue(object sender, double value)
         {
-            Console.WriteLine($"Value='{value}'");
+            Console.WriteLine($"Sender='{sender.GetType()}' Value='{value}'");
         }
     }
 }

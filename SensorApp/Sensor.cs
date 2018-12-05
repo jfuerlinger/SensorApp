@@ -12,7 +12,7 @@ namespace SensorApp
 
         private List<double> _values;
 
-        public event Action<double> NewValue; 
+        public event EventHandler<double> NewValue; 
 
         public Sensor(string name)
         {
@@ -33,7 +33,7 @@ namespace SensorApp
             //}
 
             // Option 2
-            NewValue?.Invoke(value);
+            NewValue?.Invoke(this, value);
         }
     }
 }
