@@ -6,13 +6,13 @@ namespace SensorApp
 {
     public class Sensor
     {
-        public delegate void NewValueHandler(double value);
+        //public delegate void NewValueHandler(double value);
 
         public string Name { get;  }
 
         private List<double> _values;
 
-        public NewValueHandler NewValue { get; set; }
+        public Action<double> NewValue { get; set; }
 
         public Sensor(string name)
         {
