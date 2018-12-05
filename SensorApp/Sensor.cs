@@ -12,7 +12,7 @@ namespace SensorApp
 
         private List<double> _values;
 
-        public Action<double> NewValue { get; set; }
+        public event Action<double> NewValue; 
 
         public Sensor(string name)
         {
